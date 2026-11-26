@@ -33,4 +33,4 @@ Inicio  →  Lista de planetas  →  Detalle del planeta (recibe un objeto Plane
 
 ## Versiones
 
-AGP 9.4.0 (Kotlin integrado, sin plugin `kotlin-android`; `kotlin-parcelize` sin versión) · Gradle 9.6 · Navigation 2.9.8 · compileSdk 36 · minSdk 24.
+AGP 9.4.0 (Kotlin integrado, sin plugin `kotlin-android`) · Kotlin 2.4.10 para `kotlin-parcelize` · Gradle 9.6 · Navigation 2.9.8 · compileSdk 36 · minSdk 24.

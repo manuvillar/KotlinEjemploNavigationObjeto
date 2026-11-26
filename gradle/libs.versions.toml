@@ -6,6 +6,8 @@ material = "1.13.0"
 activity = "1.11.0"
 constraintlayout = "2.2.1"
 navigation = "2.9.8"
+# Versión de Kotlin para el plugin Parcelize (igual o mayor que la que trae AGP 9)
+kotlin = "2.4.10"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -22,3 +24,5 @@ androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation
 android-application = { id = "com.android.application", version.ref = "agp" }
 # Safe Args: genera clases para pasar argumentos entre destinos de forma segura
 navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
+# Parcelize: genera el código de Parcelable con la anotación @Parcelize
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }

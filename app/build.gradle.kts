@@ -4,9 +4,8 @@ plugins {
     alias(libs.plugins.android.application)
     // Safe Args: siempre DESPUÉS del plugin de Android
     alias(libs.plugins.navigation.safeargs)
-    // Parcelize: permite usar @Parcelize para pasar objetos entre destinos.
-    // Sin versión: usa la de Kotlin que ya trae AGP 9 (así no hay conflictos)
-    id("kotlin-parcelize")
+    // Parcelize: permite usar @Parcelize para pasar objetos entre destinos
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
