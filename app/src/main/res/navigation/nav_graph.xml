@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- el GRAFO DE NAVEGACIÓN.
+     - Cada <fragment> es un DESTINO (una pantalla).
+     - Cada <action> es un CAMINO posible de un destino a otro.
+     - app:startDestination: el destino que se muestra al arrancar. -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+
+    <!-- Destino 1: Inicio -->
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="es.iesoretania.ejemplonavigation.InicioFragment"
+        android:label="@string/titulo_inicio"
+        tools:layout="@layout/fragment_inicio">
+
+        <!-- Acción Inicio -> Lista -->
+        <action
+            android:id="@+id/action_inicio_to_lista"
+            app:destination="@id/listaFragment" />
+    </fragment>
+
+    <!-- Destino 2: Lista -->
+    <fragment
+        android:id="@+id/listaFragment"
+        android:name="es.iesoretania.ejemplonavigation.ListaFragment"
+        android:label="@string/titulo_lista"
+        tools:layout="@layout/fragment_lista">
+
+        <!-- Acción Lista -> Detalle, con animaciones (opcional) -->
+        <action
+            android:id="@+id/action_lista_to_detalle"
+            app:destination="@id/detalleFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <!-- Destino 3: Detalle.
+         El título definitivo (el nombre del planeta) lo pone DetalleFragment -->
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="es.iesoretania.ejemplonavigation.DetalleFragment"
+        android:label="@string/titulo_detalle"
+        tools:layout="@layout/fragment_detalle">
+
+        <!-- Argumento que RECIBE este destino: un OBJETO Planeta.
+             En argType va el nombre COMPLETO de la clase (paquete + clase).
+             La clase tiene que ser Parcelable (en Planeta.kt, con @Parcelize). -->
+        <argument
+            android:name="planeta"
+            app:argType="es.iesoretania.ejemplonavigation.Planeta" />
+
+        <!-- volver al inicio LIMPIANDO la pila.
+             popUpTo + popUpToInclusive="true": saca de la pila todo hasta Inicio
+             (incluido) y luego mete un Inicio nuevo => la pila queda solo [Inicio] -->
+        <action
+            android:id="@+id/action_detalle_to_inicio"
+            app:destination="@id/inicioFragment"
+            app:popUpTo="@id/inicioFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Manifiesto: declara la app y sus componentes ante el sistema Android -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- android:theme: el tema sin ActionBar definido en res/values/themes.xml -->
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EjemploNavigation">
+
+        <!-- Una sola Activity: las "pantallas" serán Fragments gestionados por Navigation.
+             ".MainActivity" se completa con el namespace de app/build.gradle.kts
+             (es.iesoretania.ejemplonavigation.MainActivity): si no coinciden con el
+             paquete de la clase, la app se cierra con ClassNotFoundException. -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <!-- MAIN + LAUNCHER: es la Activity que se abre desde el icono -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

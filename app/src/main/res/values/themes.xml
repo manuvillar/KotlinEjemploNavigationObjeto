@@ -1,0 +1,4 @@
+<resources>
+    <!-- Tema sin ActionBar: usamos nuestra propia MaterialToolbar en activity_main -->
+    <style name="Theme.EjemploNavigation" parent="Theme.Material3.DayNight.NoActionBar" />
+</resources>

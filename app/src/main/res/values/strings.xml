@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Ejemplo Navigation</string>
+
+    <!-- Títulos de cada destino (aparecen en la Toolbar) -->
+    <string name="titulo_inicio">Inicio</string>
+    <string name="titulo_lista">Planetas</string>
+    <string name="titulo_detalle">Detalle</string>
+
+    <!-- Inicio -->
+    <string name="bienvenida">Bienvenido al sistema solar</string>
+    <string name="ver_lista">Ver planetas</string>
+
+    <!-- Lista -->
+    <string name="elige_planeta">Elige un planeta</string>
+    <string name="mercurio">Mercurio</string>
+    <string name="venus">Venus</string>
+    <string name="tierra">Tierra</string>
+    <string name="marte">Marte</string>
+
+    <!-- Detalle -->
+    <!-- %1$.1f: hueco para un número decimal con 1 decimal (se rellena con getString) -->
+    <string name="distancia_sol">Distancia al Sol: %1$.1f millones de km</string>
+    <string name="volver_inicio">Volver al inicio</string>
+</resources>
