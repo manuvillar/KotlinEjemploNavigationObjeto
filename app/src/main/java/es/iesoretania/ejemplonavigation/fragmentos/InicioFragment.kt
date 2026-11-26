@@ -1,4 +1,4 @@
-package es.iesoretania.ejemplonavigation
+package es.iesoretania.ejemplonavigation.fragmentos
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import es.iesoretania.ejemplonavigation.R
 import es.iesoretania.ejemplonavigation.databinding.FragmentInicioBinding
 
 /**

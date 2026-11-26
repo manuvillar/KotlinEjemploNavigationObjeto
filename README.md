@@ -24,10 +24,10 @@ Inicio  →  Lista de planetas  →  Detalle del planeta (recibe un objeto Plane
 | Fichero | Qué hace |
 | --- | --- |
 | `MainActivity.kt` | Única Activity: Toolbar, insets y NavController |
-| `InicioFragment.kt` | Primera pantalla: navega a la lista |
+| `fragmentos/InicioFragment.kt` | Primera pantalla: navega a la lista |
 | `Planeta.kt` | Modelo de datos (data class con @Parcelize) |
-| `ListaFragment.kt` | Lista de planetas: navega al detalle pasando el objeto Planeta |
-| `DetalleFragment.kt` | Muestra los datos del Planeta recibido y vuelve al inicio |
+| `fragmentos/ListaFragment.kt` | Lista de planetas: navega al detalle pasando el objeto Planeta |
+| `fragmentos/DetalleFragment.kt` | Muestra los datos del Planeta recibido y vuelve al inicio |
 | `res/navigation/nav_graph.xml` | El grafo de navegación |
 | `res/layout/activity_main.xml` | Toolbar + NavHostFragment |
 

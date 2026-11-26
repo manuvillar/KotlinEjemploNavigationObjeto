@@ -12,7 +12,7 @@
     <!-- Destino 1: Inicio -->
     <fragment
         android:id="@+id/inicioFragment"
-        android:name="es.iesoretania.ejemplonavigation.InicioFragment"
+        android:name="es.iesoretania.ejemplonavigation.fragmentos.InicioFragment"
         android:label="@string/titulo_inicio"
         tools:layout="@layout/fragment_inicio">
 
@@ -25,7 +25,7 @@
     <!-- Destino 2: Lista -->
     <fragment
         android:id="@+id/listaFragment"
-        android:name="es.iesoretania.ejemplonavigation.ListaFragment"
+        android:name="es.iesoretania.ejemplonavigation.fragmentos.ListaFragment"
         android:label="@string/titulo_lista"
         tools:layout="@layout/fragment_lista">
 
@@ -43,7 +43,7 @@
          El título definitivo (el nombre del planeta) lo pone DetalleFragment -->
     <fragment
         android:id="@+id/detalleFragment"
-        android:name="es.iesoretania.ejemplonavigation.DetalleFragment"
+        android:name="es.iesoretania.ejemplonavigation.fragmentos.DetalleFragment"
         android:label="@string/titulo_detalle"
         tools:layout="@layout/fragment_detalle">
 
